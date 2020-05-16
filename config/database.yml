@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: demo_scaleway_production
-  username: demo_scaleway
-  password: <%= ENV['DEMO_SCALEWAY_DATABASE_PASSWORD'] %>
+  # database: demo_scaleway_production
+  # username: demo_scaleway
+  # password: <%= ENV['DEMO_SCALEWAY_DATABASE_PASSWORD'] %>
+  rails_master_key: <%= ENV['RAILS_MASTER_KEY'] %>
+  url: <%= ENV['DATABASE_URL'] %>
